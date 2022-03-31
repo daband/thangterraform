@@ -1,0 +1,21 @@
+; [db_and_web_server]
+; db_and_web_server1 ansible_host=20.216.35.250 ansible_user=al ansible_ssh_pass=Azure@123
+
+[linux-vm]
+20.239.89.117
+
+[linux-vm:vars]
+ansible_user=huuthang
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_python_interpreter=/usr/bin/python3
+
+[windows-vm]
+20.187.92.164
+
+[windows-vm:vars]
+ansible_user=thang123
+ansible_password=Password1234!
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_port= 5985
+ansible_winrm_server_cert_validation=ignore

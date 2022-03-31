@@ -1,0 +1,9 @@
+---
+
+    - name: Install Java for LINUX-VM
+      import_tasks: linux-vm.yml
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: Install Java for WINDOWS-VM
+      import_tasks: windows-vm.yml
+      when: ansible_facts['os_family'] == "Windows"

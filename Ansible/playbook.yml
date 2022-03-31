@@ -1,0 +1,7 @@
+- name: Install Java
+  hosts: windows-vm,linux-vm
+  
+  roles:
+    - role-java
+
+
